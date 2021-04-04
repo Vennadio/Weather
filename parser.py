@@ -6,6 +6,6 @@ resp = requests.get('https://world-weather.ru/pogoda/russia/', headers=header).t
 soup = BS(resp, 'html.parser')
 
 for link in soup.find(class_="block-cities").find_all('a'):
-print(link.text)
-print(link.get('href'))
+    print(link.text)
+    print(link.get('href'))
 
